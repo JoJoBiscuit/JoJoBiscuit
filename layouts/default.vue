@@ -1,10 +1,18 @@
 <template>
   <div class="font-serif">
+    <Nav></Nav>
     <Nuxt />
   </div>
 </template>
 
 <script>
+import Nav from '@/components/common/Nav'
+
+export default {
+  components: {
+    Nav,
+  },
+}
 </script>
 
 <style>
