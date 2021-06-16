@@ -30,22 +30,21 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default {
   methods: {
     init() {
       let productItemClass = '.product-item';
-      let productItems = gsap.utils.toArray(productItemClass);
+      let productItems = this.$gsap.utils.toArray(productItemClass);
       
       productItems.forEach(item => {
-        ScrollTrigger.create({
+        this.$gsap.set(item, {
+          autoAlpha: 0
+        });
+
+        this.$scrollTrigger.create({
           trigger: item,
           onEnter: () => {
-            gsap.fromTo(item, {
+            this.$gsap.fromTo(item, {
               yPercent: 100,
               autoAlpha: 0
             }, {
@@ -55,10 +54,10 @@ export default {
               ease: 'expo',
               overwrite: 'auto'
             })
-          }
+          },
         })
       })
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {

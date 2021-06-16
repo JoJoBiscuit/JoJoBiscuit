@@ -25,7 +25,9 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '@/plugins/vant.js'
+    // '@/plugins/vant.js',
+    '@/plugins/swiper.js',
+    '@/plugins/gsap.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -42,6 +44,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['gsap'],
+    transpile: [
+      'gsap'
+    ],
   }
 }

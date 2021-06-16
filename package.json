@@ -13,7 +13,9 @@
     "gsap": "^3.6.1",
     "moment": "^2.29.1",
     "nuxt": "^2.15.3",
-    "vant": "^2.12.20"
+    "swiper": "^6.7.0",
+    "vant": "^2.12.20",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.1.2",
