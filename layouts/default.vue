@@ -1,16 +1,19 @@
 <template>
   <div class="font-serif">
-    <Nav></Nav>
+    <Nav />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Nav from '@/components/common/Nav'
+import Footer from '@/components/common/Footer'
 
 export default {
   components: {
     Nav,
+    Footer,
   },
 }
 </script>
