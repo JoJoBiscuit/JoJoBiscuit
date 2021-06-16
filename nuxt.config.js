@@ -20,13 +20,13 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/tailwind.css'
+    '@/assets/css/tailwind.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    // '@/plugins/vant.js',
-    '@/plugins/swiper.js',
+    '@/plugins/vant.js',
+    '@/plugins/animate.js',
     '@/plugins/gsap.js',
   ],
 

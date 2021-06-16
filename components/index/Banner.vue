@@ -1,6 +1,6 @@
 <template>
-  <swiper class="w-full h-screen overflow-hidden">
-    <swiper-slide class="relative w-full h-screen">
+  <van-swipe :show-indicators="false" :autoplay="1000" class="w-full h-screen overflow-hidden">
+    <van-swipe-item class="relative w-full h-screen">
       <img src="@/assets/img/index-banner-1.jpg" alt="kaisen" class="w-full h-full object-cover">
       <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5 flex items-center">
         <div class="text-white px-10">
@@ -9,9 +9,9 @@
           <button class="bg-white text-blueGray-700 text-xs px-5 py-3 rounded-sm uppercase">Explore More</button>
         </div>
       </div>
-    </swiper-slide>
+    </van-swipe-item>
 
-    <swiper-slide class="relative w-full h-screen">
+    <van-swipe-item class="relative w-full h-screen">
       <img src="@/assets/img/index-banner-2.jpg" alt="kaisen" class="w-full h-full object-cover">
       <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5 flex items-center">
         <div class="text-white px-10">
@@ -20,8 +20,8 @@
           <button class="bg-white text-blueGray-700 text-xs px-5 py-3 rounded-sm uppercase">Explore More</button>
         </div>
       </div>
-    </swiper-slide>
-  </swiper>
+    </van-swipe-item>
+  </van-swipe>
 </template>
 
 <script>

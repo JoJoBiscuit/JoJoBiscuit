@@ -26,8 +26,12 @@ module.exports = {
         '102': '28rem',
         '108': '32rem',
         '116': '38rem',
+        'screen-90': '90vh',
         'screen-75': '75vh',
         'screen-50': '50vh',
+      },
+      minHeight: {
+        '32': '12rem',
       },
     },
   },
