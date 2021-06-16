@@ -1,5 +1,5 @@
 <template>
-  <van-swipe :show-indicators="false" :autoplay="1000" class="w-full h-screen overflow-hidden">
+  <van-swipe :show-indicators="false" :autoplay="6000" class="w-full h-screen overflow-hidden">
     <van-swipe-item class="relative w-full h-screen">
       <img src="@/assets/img/index-banner-1.jpg" alt="kaisen" class="w-full h-full object-cover">
       <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5 flex items-center">
