@@ -31,13 +31,27 @@
       'z-index': 10,
     }">
       <div class="w-full h-full flex flex-col justify-center items-center font-mono gap-2 bg-gray-800 text-gray-50 text-xl">
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/">Home</NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/story">Story</NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/process">Process</NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/products">Products</NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/news">News</NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/about">About Us</NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/contact">Contact Us</NuxtLink>
+        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/">
+          Home
+        </NuxtLink>
+        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/story">
+          Story
+        </NuxtLink>
+        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/process">
+          Process
+        </NuxtLink>
+        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/products">
+          Products
+        </NuxtLink>
+        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/news">
+          News
+        </NuxtLink>
+        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/about">
+          About Us
+        </NuxtLink>
+        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/contact">
+          Contact Us
+        </NuxtLink>
       </div>
     </van-popup>
   </div>

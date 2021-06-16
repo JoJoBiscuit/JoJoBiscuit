@@ -33,18 +33,8 @@
 export default {
   methods: {
     init() {
-      let productItemClass = '.product-item';
-      let productItems = this.$gsap.utils.toArray(productItemClass);
-      
-      productItems.forEach(item => {
-        this.$scrollTrigger.create({
-          trigger: item,
-          end: 99999,
-          toggleClass: {
-            className: 'animate__fadeInUp',
-            targets: item
-          }
-        })
+      this.$scrollTrigger.batch('.product-item', {
+        toggleClass: "animate__fadeInUp"
       })
     },
   },
