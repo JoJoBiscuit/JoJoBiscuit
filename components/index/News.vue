@@ -21,8 +21,8 @@
 
     <!-- 平板、PC -->
     <div class="hidden w-full overflow-hidden py-6 px-9 md:flex">
-      <div v-for="(item, index) in news" :key="index" class="news-item animate__animated w-4/12 h-108 px-3">
-        <div class="w-full h-full bg-white rounded-sm border border-gray-100">
+      <div v-for="(item, index) in news" :key="index" class="w-4/12 h-108 px-3">
+        <div class="news-item animate__animated w-full h-full bg-white rounded-sm border border-gray-100">
           <img :src="item.image" alt="kaisen" class="w-full h-1/3 object-cover">
           <div class="p-8">
             <h3 class="text-gray-800 text-lg font-semibold max-h-20 overflow-ellipsis overflow-hidden break-words">{{item.title}}</h3>
@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <div class="text-center pt-2">
+    <div class="text-center pt-4">
       <button class="px-6 py-2 rounded-sm bg-gray-700 text-white font-mono uppercase text-sm font-medium md:text-lg md:px-8 md:py-4">All News</button>
     </div>
   </div>
@@ -68,7 +68,9 @@ export default {
     },
   },
   mounted() {
-    this.initAnimation();
+    this.$nextTick(() => {
+      this.initAnimation();
+    })
   }
 }
 </script>

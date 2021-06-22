@@ -26,6 +26,8 @@ module.exports = {
         '102': '28rem',
         '108': '32rem',
         '116': '38rem',
+        '120': '44rem',
+        '124': '50rem',
         'screen-90': '90vh',
         'screen-75': '75vh',
         'screen-50': '50vh',

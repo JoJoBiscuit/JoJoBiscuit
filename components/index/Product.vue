@@ -48,7 +48,9 @@ export default {
     },
   },
   mounted() {
-    this.initAnimation();
+    this.$nextTick(() => {
+      this.initAnimation();
+    })
   }
 }
 </script>
