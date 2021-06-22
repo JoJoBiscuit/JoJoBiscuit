@@ -1,28 +1,41 @@
 <template>
   <div class="relative">
-    <div class="nav w-screen px-5 py-4 rounded-b-sm fixed top-0 left-0 flex justify-between items-center" :class="{
+    <div class="nav w-screen px-5 py-4 rounded-b-sm fixed top-0 left-0 md:px-12 flex justify-center" :class="{
       'shadow': status !== 0,
       'bg-white': status !== 0 || isShowMenu,
       '-top-32': status === 1,
     }" :style="{
       'z-index': isShowMenu ? 9999 : 20
     }">
-      <div class="w-32 relative">
-        <img src="@/assets/img/logo-dark.png" alt="kaisen" class="logo w-full h-auto" :class="{
-          'opacity-0': status === 0 && !isShowMenu
-        }">
-        <img src="@/assets/img/logo-light.png" alt="kaisen" class="logo w-full h-auto absolute top-0 left-0" :class="{
-          'opacity-0': status !== 0 || isShowMenu
-        }">
-      </div>
 
-      <div class="menu-icon" @click="toggleMenu()" :class="{
-        'active': isShowMenu,
-        'default': !isShowMenu,
-      }">
-        <span v-for="num in 3" :key="num" class="line" :class="[
-          isShowMenu || status !== 0 ? 'bg-gray-800' : 'bg-white'
-        ]"></span>
+      <div class="w-full flex justify-between items-center lg:container">
+        <div class="w-32 relative">
+          <img src="@/assets/img/logo-dark.png" alt="kaisen" class="logo w-full h-auto" :class="{
+            'opacity-0': status === 0 && !isShowMenu
+          }">
+          <img src="@/assets/img/logo-light.png" alt="kaisen" class="logo w-full h-auto absolute top-0 left-0" :class="{
+            'opacity-0': status !== 0 || isShowMenu
+          }">
+        </div>
+
+        <!-- 移动端 -->
+        <div class="menu-icon mr-2 block md:hidden" @click="toggleMenu()" :class="{
+          'active': isShowMenu,
+          'default': !isShowMenu,
+        }">
+          <span v-for="num in 3" :key="num" class="line" :class="[
+            isShowMenu || status !== 0 ? 'bg-gray-800' : 'bg-white'
+          ]"></span>
+        </div>
+
+        <!-- 平板、PC -->
+        <div class="hidden md:flex md:gap-3 lg:gap-4 text-white" :class="[
+          isShowMenu || status !== 0 ? 'text-gray-800' : 'text-white'
+        ]">
+          <NuxtLink v-for="(item, index) in navs" :key="index" class="p-1 font-semibold text-sm md:text-sm lg:text-base" :to="item.to">
+            {{item.text}}
+          </NuxtLink>
+        </div>
       </div>
     </div>
 
@@ -31,26 +44,8 @@
       'z-index': 10,
     }">
       <div class="w-full h-full flex flex-col justify-center items-center font-mono gap-2 bg-gray-800 text-gray-50 text-xl">
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/">
-          Home
-        </NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/story">
-          Story
-        </NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/process">
-          Process
-        </NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/products">
-          Products
-        </NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/news">
-          News
-        </NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/about">
-          About Us
-        </NuxtLink>
-        <NuxtLink class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" to="/contact">
-          Contact Us
+        <NuxtLink v-for="(item, index) in navs" :key="index" class="link p-1 font-bold animate__animated animate__fadeInDown animate__faster" :to="item.to">
+          {{item.text}}
         </NuxtLink>
       </div>
     </van-popup>
@@ -66,6 +61,29 @@ export default {
       lastScrollTop: 0,
       ticking: false,
       isShowMenu: false,
+
+      navs: [{
+        text: 'Home',
+        to: '/'
+      }, {
+        text: 'Story',
+        to: '/story'
+      }, {
+        text: 'Process',
+        to: '/process'
+      }, {
+        text: 'Products',
+        to: '/products'
+      }, {
+        text: 'News',
+        to: '/news'
+      }, {
+        text: 'About Us',
+        to: '/about'
+      }, {
+        text: 'Contact Us',
+        to: '/contact'
+      }]
     }
   },
   methods: {
@@ -76,7 +94,7 @@ export default {
       if( !this.ticking) {
         window.requestAnimationFrame(() => {
           let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-          if (scrollTop > 20) {
+          if (scrollTop > 100) {
             if(scrollTop > this.lastScrollTop) { // 下滑页面
               this.status = 1;
             }

@@ -1,5 +1,5 @@
 <template>
-  <div class="font-serif">
+  <div class="font-serif w-screen overflow-x-hidden">
     <Nav />
     <Nuxt />
     <Footer />
@@ -37,6 +37,9 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+}
+body {
+  overflow-x: hidden;
 }
 
 *,

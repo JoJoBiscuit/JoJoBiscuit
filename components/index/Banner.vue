@@ -1,12 +1,12 @@
 <template>
   <van-swipe :show-indicators="false" :autoplay="6000" class="w-full h-screen overflow-hidden">
     <van-swipe-item v-for="(item, index) in items" :key="index" class="relative w-full h-screen">
-      <img :src="item.image" alt="kaisen" class="w-full h-full object-cover">
-      <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5 flex items-center">
-        <div class="text-white px-10 md:w-8/12 md:px-12">
-          <h1 class="text-4xl font-medium pt-16 md:text-6xl md:leading-tight">{{item.title}}</h1>
-          <p class="text-lg mt-6 mb-16 font-sans md:text-2xl">{{item.content}}</p>
-          <button @click="clickButton(item)" class="bg-white text-blueGray-700 text-xs px-5 py-3 rounded-sm uppercase md:text-lg md:px-8 md:py-4">Explore More</button>
+      <img :src="item.image" alt="kaisen" class="w-full h-full object-cover object-center">
+      <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-5 flex items-center justify-center">
+        <div class="text-white px-10 w-full md:w-8/12 md:px-12 lg:container">
+          <h1 class="text-4xl font-medium pt-16 md:text-5xl md:leading-tight lg:w-8/12">{{item.title}}</h1>
+          <p class="text-lg mt-6 mb-16 font-sans md:text-xl lg:w-8/12">{{item.content}}</p>
+          <button @click="clickButton(item)" class="bg-white text-blueGray-700 text-xs px-5 py-3 rounded-sm uppercase md:text-sm md:px-8 md:py-3">Explore More</button>
         </div>
       </div>
     </van-swipe-item>

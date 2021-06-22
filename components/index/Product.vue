@@ -14,7 +14,7 @@
     </div>
 
     <div class="pt-5 text-center">
-      <button class="product-item px-6 py-2 rounded-sm bg-gray-700 text-white font-mono uppercase text-sm font-medium md:text-lg md:px-8 md:py-4">All Collections</button>
+      <button class="product-item px-6 py-2 rounded-sm bg-gray-700 text-white font-mono uppercase text-sm font-medium md:text-lg md:px-8 md:py-3 lg:text-sm">All Collections</button>
     </div>
   </div>
 </template>

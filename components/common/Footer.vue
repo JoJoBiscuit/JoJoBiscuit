@@ -1,51 +1,53 @@
 <template>
   <div class="font-sans">
-    <div class="flex flex-col bg-gray-800 text-gray-50 text-lg px-10 pb-16 md:flex-row md:flex-wrap md:py-40 md:px-12 md:text-xl">
-      <div class="mt-10 -m-3 md:w-3/12">
-        <img src="@/assets/img/logo-light.png" alt="kaisen" class="w-36 h-auto">
-      </div>
+    <div class="w-full bg-gray-800 flex justify-center">
+      <div class="flex flex-col text-gray-50 text-lg px-10 pb-16 md:flex-row md:flex-wrap md:pt-36 md:pb-40 md:px-12 md:text-xl lg:container lg:text-base">
+        <div class="mt-10 -m-3 md:w-3/12">
+          <img src="@/assets/img/logo-light.png" alt="kaisen" class="w-36 h-auto">
+        </div>
 
-      <div class="flex flex-col gap-1 mt-10 md:w-3/12 md:gap-3">
-        <NuxtLink to="/">
-          Home
-        </NuxtLink>
-        <NuxtLink to="/products">
-          Products
-        </NuxtLink>
-        <NuxtLink to="/news">
-          News
-        </NuxtLink>
-        <NuxtLink to="/about">
-          About Us
-        </NuxtLink>
-      </div>
+        <div class="flex flex-col gap-1 mt-10 md:w-3/12 md:gap-3">
+          <NuxtLink to="/">
+            Home
+          </NuxtLink>
+          <NuxtLink to="/products">
+            Products
+          </NuxtLink>
+          <NuxtLink to="/news">
+            News
+          </NuxtLink>
+          <NuxtLink to="/about">
+            About Us
+          </NuxtLink>
+        </div>
 
-      <div class="flex flex-col gap-1 mt-10 md:w-3/12 md:gap-3">
-        <NuxtLink to="/story">
-          Story
-        </NuxtLink>
-        <NuxtLink to="/process">
-          Process
-        </NuxtLink>
-        <NuxtLink to="/contact">
-          Contact Us
-        </NuxtLink>
-      </div>
+        <div class="flex flex-col gap-1 mt-10 md:w-3/12 md:gap-3">
+          <NuxtLink to="/story">
+            Story
+          </NuxtLink>
+          <NuxtLink to="/process">
+            Process
+          </NuxtLink>
+          <NuxtLink to="/contact">
+            Contact Us
+          </NuxtLink>
+        </div>
 
-      <div class="flex flex-col gap-1 mt-10 md:w-3/12 md:gap-3">
-        <span class="italic">
-          {{address}}
-        </span>
-        <span class="mt-10">
-          {{email}}
-        </span>
-        <span>
-          {{phone}}
-        </span>
+        <div class="flex flex-col gap-1 mt-10 md:w-3/12 md:gap-3">
+          <span class="italic">
+            {{address}}
+          </span>
+          <span class="mt-6">
+            {{email}}
+          </span>
+          <span>
+            {{phone}}
+          </span>
+        </div>
       </div>
     </div>
 
-    <div class="px-10 pt-8 pb-12 bg-blue-900 text-blue-50 font-serif uppercase md:px-12 md:py-10 md:text-center">
+    <div class="px-10 pt-8 pb-12 bg-blue-900 text-blue-50 font-serif uppercase md:px-12 md:py-10 md:text-center lg:text-sm">
       <span>© Copyright 2021 {{name}}. All rights reserved. </span>
     </div>
   </div>

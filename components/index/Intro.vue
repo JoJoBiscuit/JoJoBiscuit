@@ -1,15 +1,17 @@
 <template>
-  <div class="px-10 pt-16 pb-6 bg-gray-50 md:px-0 md:pt-20 md:pb-10">
-    <div class="intro-item pb-1 animate__animated md:px-12">
-      <h2 class="text-gray-800 text-2xl font-semibold md:text-3xl md:leading-tight">{{title}}</h2>
-      <p class="py-5 text-gray-500 md:text-lg">{{content}}</p>
-    </div>
-    
-    <div class="py-5 md:flex md:flex-wrap md:justify-around md:px-6">
-      <div v-for="(item, index) in items" :key="index" class="intro-item py-3 animate__animated md:w-4/12 md:px-6">
-        <h3 class="text-gray-800 text-xl font-semibold md:text-2xl md:leading-tight">{{item.title}}</h3>
-        <p class="py-5 text-gray-500 md:text-lg">{{item.content}}</p>
-        <button @click="clickButton(item)" class="pt-2 pb-1 mb-4 mt-4 font-mono uppercase text-sm text-gray-700 font-medium border-b border-gray-300 md:border-0 md:text-gray-800">{{item.btnText}}</button>
+  <div class="px-10 pt-16 pb-6 bg-gray-50 md:px-0 md:pt-20 md:pb-10 flex justify-center">
+    <div class="w-full lg:container">
+      <div class="intro-item pb-1 animate__animated md:px-12">
+        <h2 class="text-gray-800 text-2xl font-semibold md:text-3xl md:leading-tight">{{title}}</h2>
+        <p class="py-5 text-gray-500 md:text-lg">{{content}}</p>
+      </div>
+      
+      <div class="py-5 md:flex md:flex-wrap md:justify-around md:px-6">
+        <div v-for="(item, index) in items" :key="index" class="intro-item py-3 animate__animated md:w-4/12 md:px-6">
+          <h3 class="text-gray-800 text-xl font-semibold md:text-2xl md:leading-tight">{{item.title}}</h3>
+          <p class="py-5 text-gray-500 md:text-lg">{{item.content}}</p>
+          <button @click="clickButton(item)" class="pt-2 pb-1 mb-4 mt-4 font-mono uppercase text-sm text-gray-700 font-medium border-b border-gray-300 md:border-0 md:text-gray-800">{{item.btnText}}</button>
+        </div>
       </div>
     </div>
   </div>
